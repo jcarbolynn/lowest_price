@@ -10,7 +10,12 @@ from vehicle import Vehicle
 def ev_roadtrip(vehicle_names, vehicle_ranges, vehicle_rental_prices):
   cars_list = []
 
+  # tuple = list(zip(vehicle_names, vehicle_ranges, vehicle_rental_prices))
+  # print(tuple[0][1])
+  # make sure you understand what you use lol
+
   # make vehicle objects
+  # zip creates a new list with each list as a tuple, creates iterable object of bundles
   for vehicle, range, price in zip(vehicle_names, vehicle_ranges, vehicle_rental_prices):
     car = Vehicle(vehicle, range, price)
     cars_list.append(car)
@@ -38,3 +43,50 @@ ev_roadtrip(vehicle_names=["Toyota Prius", "Leaf", "ID4"], vehicle_ranges=[100, 
 # mark). Clicking the Run tests button will run the Challenge 
 # inputs against your code, displaying either a success message, 
 # or a message about what was expected and what was observed.
+
+# error if not enough info (in class) in main catch error
+# good to write more tests
+# how to make it more usable ex allow user to change trip mileage or 
+
+
+# car_list = [
+#   {
+#     name: 'prius',
+#     range: 100,
+#     rent: 50,
+#   },
+
+#   {
+#     name: 'leaf',
+#     range: 200,
+#     rent: 75,
+#   },
+#   {
+#     name: 'ld4',
+#     range: 75,
+#     rent: 100,
+#   }
+# ]
+
+# car_list[0]
+
+# car_list_2 = {
+# prius:
+#   {
+#     range: 100,
+#     rent: 50,
+#   }
+
+# leaf:
+#   {
+#     range: 200,
+#     rent: 75,
+#   }
+
+# id4:
+#   {
+#     range: 75,
+#     rent: 100,
+#   }
+# }
+
